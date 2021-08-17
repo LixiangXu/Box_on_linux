@@ -31,13 +31,13 @@ python3 get_box_token.py
 ?state=box_csrf_token_#########&code=###############
 ```
 6. copy the code and paste in the terminal where you are running `get_box_token.py`, press enter
-7. now here are the access token and refresh token (it would be saved as `boxtoken.txt` in current directory, and valid for several days I think
+7. now here are the access token and refresh token (it would be saved as `boxtoken.txt` in current directory, and valid for several days I think)
 
 ## Step 4: fetch folder and files from Box with box client
 1. run this and paste your access token and refresh token
 ```python
 from BoxClient import BoxClient
-boxclien = BoxClient
+boxclient = BoxClient()
 ```
 2. if you know the file or floder id, you can fetch the folder with 
 ```python
