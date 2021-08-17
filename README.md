@@ -48,7 +48,8 @@ or file with
 box_file = boxclient.client.file(file_id=####)
 ```
 The file or folder id could be found in your Box on browser
-3. if you know the directory of the file in Box, then you can fetch the file iteratively by fetching all items in current directory 
+
+3. if you know the directory of the file in Box, then you can fetch the file recursively by fetching all items in current directory 
 ```python
 items = box_folder.get_items()
 ```
