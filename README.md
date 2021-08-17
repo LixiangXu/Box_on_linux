@@ -22,7 +22,7 @@ python3 -m http.server 4684
 ```
 2. run 
 ```bash
-python3 run get_box_token.py
+python3 get_box_token.py
 ```
 3. this code would return you a URL, you should open it in browser
 4. login and grant access (same as you login to Box), then it would redict to `localhost:4684`
