@@ -9,7 +9,7 @@ Here are the instructions about how to setup box client on linux OS
 5. save changes, (and request Box admins approval if necessary)
 
 ## Step 2: install box-python-sdk
-```
+```bash
 pip install boxsdk
 ```
 
@@ -17,11 +17,11 @@ here is the [doc](https://github.com/box/box-python-sdk)
 
 ## Step 3: request access token and refresh token
 1. run local http server with: 
-```
+```bash
 python3 -m http.server 4684
 ```
 2. run 
-```
+```bash
 python3 run get_box_token.py
 ```
 3. this code would return you a URL, you should open it in browser
@@ -35,26 +35,26 @@ python3 run get_box_token.py
 
 ## Step 4: fetch folder and files from Box with box client
 1. run this and paste your access token and refresh token
-```
+```python
 from BoxClient import BoxClient
 boxclien = BoxClient
 ```
 2. if you know the file or floder id, you can fetch the folder with 
-```
+```python
 box_folder = boxclient.client.folder(folder_id=###)
 ```
 or file with 
-```
+```python
 box_file = boxclient.client.file(file_id=####)
 ```
 The file or folder id could be found in your Box on browser
 3. if you know the directory of the file in Box, then you can fetch the file iteratively by fetching all items in current directory 
-```
+```python
 items = box_folder.get_items()
 ```
 and then find the target folder or file by `item.name`, finally you will find the target file and return `box_file=item`
 4. once you have the `box_file`, use wget to download it 
-```
+```python
 wget.download(box_file..get_download_url(), your_directory)
 ```
 5. for more instructions, read [doc for Box Api](https://developer.box.com/reference/)
