@@ -52,7 +52,8 @@ The file or folder id could be found in your Box on browser
 ```python
 items = box_folder.get_items()
 ```
-and then find the target folder or file by `item.name`, finally you will find the target file and return `box_file=item`
+and then find the target folder or file by `item.name`, finally you will find the target file and return `box_file=item`.
+
 4. once you have the `box_file`, use wget to download it 
 ```python
 wget.download(box_file..get_download_url(), your_directory)
